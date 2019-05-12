@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6319022c94944c138acc7fc1da1e8bb4" Name="Diagram1">
+        <EntityTypeShape EntityType="saavyTechDBModel.Brand" Width="1.5" PointX="8.625" PointY="6" />
+        <EntityTypeShape EntityType="saavyTechDBModel.equiptmentType" Width="1.5" PointX="3.375" PointY="2.75" />
+        <EntityTypeShape EntityType="saavyTechDBModel.Jobs" Width="1.5" PointX="5.625" PointY="3.25" />
+        <EntityTypeShape EntityType="saavyTechDBModel.status" Width="1.5" PointX="3.375" PointY="6" />
+        <EntityTypeShape EntityType="saavyTechDBModel.userRole" Width="1.5" PointX="8.375" PointY="1.625" />
+        <EntityTypeShape EntityType="saavyTechDBModel.Users" Width="1.5" PointX="10.625" PointY="1" />
+        <AssociationConnector Association="saavyTechDBModel.FK_New_Job_ToTable_1" />
+        <AssociationConnector Association="saavyTechDBModel.FK_New_Job_ToTable" />
+        <AssociationConnector Association="saavyTechDBModel.FK_New_Job_ToTable_2" />
+        <AssociationConnector Association="saavyTechDBModel.FK_Users_ToTable" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
