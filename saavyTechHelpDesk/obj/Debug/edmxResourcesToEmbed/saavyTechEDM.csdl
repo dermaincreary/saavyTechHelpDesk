@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="saavyTechDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="saavyTechDBE" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Brand" EntityType="saavyTechDBModel.Brand" />
+    <EntitySet Name="equiptmentType" EntityType="saavyTechDBModel.equiptmentType" />
+    <EntitySet Name="Jobs" EntityType="saavyTechDBModel.Jobs" />
+    <EntitySet Name="status" EntityType="saavyTechDBModel.status" />
+    <EntitySet Name="userRole" EntityType="saavyTechDBModel.userRole" />
+    <EntitySet Name="Users" EntityType="saavyTechDBModel.Users" />
+    <AssociationSet Name="FK_New_Job_ToTable_1" Association="saavyTechDBModel.FK_New_Job_ToTable_1">
+      <End Role="Brand" EntitySet="Brand" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_New_Job_ToTable" Association="saavyTechDBModel.FK_New_Job_ToTable">
+      <End Role="equiptmentType" EntitySet="equiptmentType" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_New_Job_ToTable_2" Association="saavyTechDBModel.FK_New_Job_ToTable_2">
+      <End Role="status" EntitySet="status" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_ToTable" Association="saavyTechDBModel.FK_Users_ToTable">
+      <End Role="userRole" EntitySet="userRole" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="brandName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Jobs" Relationship="saavyTechDBModel.FK_New_Job_ToTable_1" FromRole="Brand" ToRole="Jobs" />
+  </EntityType>
+  <EntityType Name="equiptmentType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="equiptmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Jobs" Relationship="saavyTechDBModel.FK_New_Job_ToTable" FromRole="equiptmentType" ToRole="Jobs" />
+  </EntityType>
+  <EntityType Name="Jobs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="contact" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="equipmentTypeId" Type="Int32" Nullable="false" />
+    <Property Name="brandId" Type="Int32" Nullable="false" />
+    <Property Name="model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="serial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="issues" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="recepId" Type="Int32" />
+    <Property Name="dateIn" Type="DateTime" Precision="3" />
+    <Property Name="techReport" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="techId" Type="Int32" />
+    <Property Name="dateRepaired" Type="DateTime" Precision="3" />
+    <Property Name="statusId" Type="Int32" Nullable="false" />
+    <Property Name="dateCollected" Type="DateTime" Precision="3" />
+    <Property Name="jobNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Brand" Relationship="saavyTechDBModel.FK_New_Job_ToTable_1" FromRole="Jobs" ToRole="Brand" />
+    <NavigationProperty Name="equiptmentType" Relationship="saavyTechDBModel.FK_New_Job_ToTable" FromRole="Jobs" ToRole="equiptmentType" />
+    <NavigationProperty Name="status" Relationship="saavyTechDBModel.FK_New_Job_ToTable_2" FromRole="Jobs" ToRole="status" />
+  </EntityType>
+  <EntityType Name="status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="statusName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Jobs" Relationship="saavyTechDBModel.FK_New_Job_ToTable_2" FromRole="status" ToRole="Jobs" />
+  </EntityType>
+  <EntityType Name="userRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="role" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="saavyTechDBModel.FK_Users_ToTable" FromRole="userRole" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="username" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="roleId" Type="Int32" />
+    <Property Name="dateCreated" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="userRole" Relationship="saavyTechDBModel.FK_Users_ToTable" FromRole="Users" ToRole="userRole" />
+  </EntityType>
+  <Association Name="FK_New_Job_ToTable_1">
+    <End Type="saavyTechDBModel.Brand" Role="Brand" Multiplicity="1" />
+    <End Type="saavyTechDBModel.Jobs" Role="Jobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="brandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_New_Job_ToTable">
+    <End Type="saavyTechDBModel.equiptmentType" Role="equiptmentType" Multiplicity="1" />
+    <End Type="saavyTechDBModel.Jobs" Role="Jobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="equiptmentType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="equipmentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_New_Job_ToTable_2">
+    <End Type="saavyTechDBModel.status" Role="status" Multiplicity="1" />
+    <End Type="saavyTechDBModel.Jobs" Role="Jobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="statusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_ToTable">
+    <End Type="saavyTechDBModel.userRole" Role="userRole" Multiplicity="0..1" />
+    <End Type="saavyTechDBModel.Users" Role="Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="roleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
