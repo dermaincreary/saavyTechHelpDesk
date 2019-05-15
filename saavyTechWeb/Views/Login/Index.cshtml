@@ -1,0 +1,118 @@
+﻿@model saavyTechWeb.Models.Users
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>saavyTech Login</title>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+    <style>
+        .panel-heading {
+            padding: 5px 15px;
+        }
+
+        .panel-footer {
+            padding: 1px 15px;
+            color: #A0A0A0;
+        }
+
+        .profile-img {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 10px;
+            display: block;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="margin-top:40px">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                       <strong> Sign in to continue</strong>
+                    </div>
+                    <div class="panel-body">
+                        @if (String.IsNullOrEmpty(ViewBag.Error))
+                        {
+                            @*<div class="alert alert-info" role="alert">
+                                Please Login to continue
+                            </div>*@
+                        }
+                        else
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                @ViewBag.Error
+                            </div>
+
+                        }
+                        
+                        @using (Html.BeginForm("Authorize", "Login", FormMethod.Post))
+                        {
+
+
+                            <fieldset>
+
+
+                                <div class="row">
+                                    <div class="center-block">
+                                        <img class="profile-img"
+                                             src="~/Content/logo1.png" alt="" />
+                                        <h3 style="text-align:center">saavyTech Login</h3>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-10  col-md-offset-1 ">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-user"></i>
+                                                </span>
+                                                @*<input class="form-control" placeholder="Username" id="loginname" name="loginname" type="text" autofocus>*@
+                                                @Html.TextBoxFor(m => m.username, new { @class = "form-control text-danger", @autofocus = "autofocus", @required = "required" })
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-lock"></i>
+                                                </span>
+                                                @Html.TextBoxFor(m => m.password, new { @class = "form-control", @type = "password" , @required = "required" })
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign in">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        window.setTimeout(function () {
+            $(".alert-danger").fadeTo(500, 0).slideUp(500, function () {
+                $(this).remove();
+            });
+        }, 1500);
+    </script>
+</body>
+</html>
