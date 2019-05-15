@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="saavyTechDBModelStoreContainer" CdmEntityContainer="DBModels">
+    <EntitySetMapping Name="Brand">
+      <EntityTypeMapping TypeName="saavyTechDBModel.Brand">
+        <MappingFragment StoreEntitySet="Brand">
+          <ScalarProperty Name="brandName" ColumnName="brandName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="equiptmentType">
+      <EntityTypeMapping TypeName="saavyTechDBModel.equiptmentType">
+        <MappingFragment StoreEntitySet="equiptmentType">
+          <ScalarProperty Name="equiptmentName" ColumnName="equiptmentName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="saavyTechDBModel.Jobs">
+        <MappingFragment StoreEntitySet="Jobs">
+          <ScalarProperty Name="jobNumber" ColumnName="jobNumber" />
+          <ScalarProperty Name="dateCollected" ColumnName="dateCollected" />
+          <ScalarProperty Name="statusId" ColumnName="statusId" />
+          <ScalarProperty Name="dateRepaired" ColumnName="dateRepaired" />
+          <ScalarProperty Name="techId" ColumnName="techId" />
+          <ScalarProperty Name="techReport" ColumnName="techReport" />
+          <ScalarProperty Name="dateIn" ColumnName="dateIn" />
+          <ScalarProperty Name="recepId" ColumnName="recepId" />
+          <ScalarProperty Name="issues" ColumnName="issues" />
+          <ScalarProperty Name="serial" ColumnName="serial" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="brandId" ColumnName="brandId" />
+          <ScalarProperty Name="equipmentTypeId" ColumnName="equipmentTypeId" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="status">
+      <EntityTypeMapping TypeName="saavyTechDBModel.status">
+        <MappingFragment StoreEntitySet="status">
+          <ScalarProperty Name="statusName" ColumnName="statusName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userRole">
+      <EntityTypeMapping TypeName="saavyTechDBModel.userRole">
+        <MappingFragment StoreEntitySet="userRole">
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="saavyTechDBModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="dateCreated" ColumnName="dateCreated" />
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
