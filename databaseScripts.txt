@@ -1,0 +1,69 @@
+CREATE TABLE [dbo].[Users] (
+    [Id]          INT           IDENTITY (1, 1) NOT NULL,
+    [firstName]   NVARCHAR (50) NULL,
+    [lastName]    NVARCHAR (50) NULL,
+    [phoneNumber] NVARCHAR (15) NULL,
+    [email]       NVARCHAR (25) NULL,
+    [username]    NVARCHAR (25) NULL,
+    [password]    NVARCHAR (25) NULL,
+    [roleId]      INT           NULL,
+    [dateCreated] NVARCHAR (10) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Users_ToTable] FOREIGN KEY ([roleId]) REFERENCES [dbo].[userRole] ([Id])
+);
+
+
+
+CREATE TABLE [dbo].[userRole] (
+    [Id]   INT           IDENTITY (1, 1) NOT NULL,
+    [role] NVARCHAR (15) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+CREATE TABLE [dbo].[status] (
+    [Id]         INT           IDENTITY (1, 1) NOT NULL,
+    [statusName] NVARCHAR (15) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+CREATE TABLE [dbo].[Jobs] (
+    [Id]              INT            IDENTITY (1, 1) NOT NULL,
+    [firstName]       NVARCHAR (50)  NOT NULL,
+    [lastName]        NVARCHAR (50)  NOT NULL,
+    [email]           NVARCHAR (50)  NOT NULL,
+    [contact]         NVARCHAR (50)  NOT NULL,
+    [equipmentTypeId] INT            NOT NULL,
+    [brandId]         INT            NOT NULL,
+    [model]           NVARCHAR (50)  NULL,
+    [serial]          NVARCHAR (50)  NULL,
+    [issues]          NVARCHAR (MAX) NULL,
+    [recepId]         INT            NULL,
+    [dateIn]          DATETIME       NULL,
+    [techReport]      NVARCHAR (MAX) NULL,
+    [techId]          INT            NULL,
+    [dateRepaired]    DATETIME       NULL,
+    [statusId]        INT            NOT NULL,
+    [dateCollected]   DATETIME       NULL,
+    [jobNumber]       NVARCHAR (20)  NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_New Job_ToTable_2] FOREIGN KEY ([statusId]) REFERENCES [dbo].[status] ([Id]),
+    CONSTRAINT [FK_New Job_ToTable_1] FOREIGN KEY ([brandId]) REFERENCES [dbo].[Brand] ([Id]),
+    CONSTRAINT [FK_New Job_ToTable] FOREIGN KEY ([equipmentTypeId]) REFERENCES [dbo].[equiptmentType] ([Id])
+);
+
+
+CREATE TABLE [dbo].[equiptmentType] (
+    [Id]             INT           IDENTITY (1, 1) NOT NULL,
+    [equiptmentName] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+CREATE TABLE [dbo].[Brand] (
+    [Id]        INT           IDENTITY (1, 1) NOT NULL,
+    [brandName] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
