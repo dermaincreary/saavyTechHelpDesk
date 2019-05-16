@@ -69,14 +69,14 @@
             // btnAddJobs
             // 
             this.btnAddJobs.Name = "btnAddJobs";
-            this.btnAddJobs.Size = new System.Drawing.Size(125, 22);
+            this.btnAddJobs.Size = new System.Drawing.Size(180, 22);
             this.btnAddJobs.Text = "Add Jobs";
             this.btnAddJobs.Click += new System.EventHandler(this.btnAddJobs_Click);
             // 
             // btnViewJobs
             // 
             this.btnViewJobs.Name = "btnViewJobs";
-            this.btnViewJobs.Size = new System.Drawing.Size(125, 22);
+            this.btnViewJobs.Size = new System.Drawing.Size(180, 22);
             this.btnViewJobs.Text = "View Jobs";
             this.btnViewJobs.Click += new System.EventHandler(this.btnViewJobs_Click);
             // 
@@ -91,7 +91,7 @@
             // btnUsers
             // 
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(102, 22);
+            this.btnUsers.Size = new System.Drawing.Size(180, 22);
             this.btnUsers.Text = "Users";
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
@@ -140,6 +140,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(684, 661);
             this.Controls.Add(this.lbljobCount);
             this.Controls.Add(this.statusStrip1);

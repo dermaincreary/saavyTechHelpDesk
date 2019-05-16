@@ -5,7 +5,6 @@ C:\Users\StRyKeR\source\repos\saavyTechHelpDesk\saavyTechHelpDesk\bin\Debug\Enti
 C:\Users\StRyKeR\source\repos\saavyTechHelpDesk\saavyTechHelpDesk\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\StRyKeR\source\repos\saavyTechHelpDesk\saavyTechHelpDesk\bin\Debug\EntityFramework.xml
 C:\Users\StRyKeR\source\repos\saavyTechHelpDesk\saavyTechHelpDesk\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\StRyKeR\source\repos\saavyTechHelpDesk\saavyTechHelpDesk\obj\Debug\saavyTechHelpDesk.csprojAssemblyReference.cache
 C:\Users\StRyKeR\source\repos\saavyTechHelpDesk\saavyTechHelpDesk\obj\Debug\saavyTechHelpDesk.addJobForm.resources
 C:\Users\StRyKeR\source\repos\saavyTechHelpDesk\saavyTechHelpDesk\obj\Debug\saavyTechHelpDesk.jobsForm.resources
 C:\Users\StRyKeR\source\repos\saavyTechHelpDesk\saavyTechHelpDesk\obj\Debug\saavyTechHelpDesk.logInForm.resources
@@ -17,3 +16,4 @@ C:\Users\StRyKeR\source\repos\saavyTechHelpDesk\saavyTechHelpDesk\obj\Debug\saav
 C:\Users\StRyKeR\source\repos\saavyTechHelpDesk\saavyTechHelpDesk\obj\Debug\saavyTechHelpDesk.csproj.CopyComplete
 C:\Users\StRyKeR\source\repos\saavyTechHelpDesk\saavyTechHelpDesk\obj\Debug\saavyTechHelpDesk.exe
 C:\Users\StRyKeR\source\repos\saavyTechHelpDesk\saavyTechHelpDesk\obj\Debug\saavyTechHelpDesk.pdb
+C:\Users\StRyKeR\source\repos\saavyTechHelpDesk\saavyTechHelpDesk\obj\Debug\saavyTechHelpDesk.csprojAssemblyReference.cache

@@ -156,6 +156,8 @@ namespace saavyTechHelpDesk
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            
+
             try
             {
                 //Collect data from the form
@@ -168,6 +170,8 @@ namespace saavyTechHelpDesk
 
                 var rand = new Random();
                 var pWord = $"{fname[0]}{lname}{rand.Next(10, 99)}";
+
+                var date = DateTime.Now.ToString("dd/MM/yyy");
 
                 //Validate minimum data is collected, as well as any other validation that you may want to enforce.
                 if (isFormInvalid())
@@ -191,12 +195,12 @@ namespace saavyTechHelpDesk
                         username = uName,
                         roleId = uRole,
                         password = pWord,
-                        dateCreated = DateTime.Now
+                        dateCreated = date
                     };
 
                     contx.Users.Add(user);
                     contx.SaveChanges();
-                    MessageBox.Show("User " + uName + " successfully added.");
+                    MessageBox.Show("User " + uName + " successfully added." + "\n\n" + "Passowrd: " + pWord);
 
                     //Functions to Reset the fields to blank and reload all the data in the GridView
                     //The reload makes the changes appear near real-time.
@@ -264,6 +268,11 @@ namespace saavyTechHelpDesk
         bool isFormInvalid()
         {
             return String.IsNullOrEmpty(txtemail.Text) || String.IsNullOrEmpty(txtusername.Text);
+        }
+
+        private void txtlname_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -52,6 +52,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 29);
             this.pictureBox1.Name = "pictureBox1";
@@ -88,6 +89,8 @@
             // 
             // btnClear
             // 
+            this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClear.Location = new System.Drawing.Point(41, 86);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
@@ -98,6 +101,8 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
+            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnLogin.Location = new System.Drawing.Point(141, 86);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
@@ -113,6 +118,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.txtPassword);
@@ -128,6 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(354, 181);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);

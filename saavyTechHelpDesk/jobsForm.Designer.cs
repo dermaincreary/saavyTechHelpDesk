@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(jobsForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lblstatus = new System.Windows.Forms.Label();
             this.gbtechReport = new System.Windows.Forms.GroupBox();
@@ -39,21 +39,21 @@
             this.btnupdateJob = new System.Windows.Forms.Button();
             this.btnreset = new System.Windows.Forms.Button();
             this.txtproblem = new System.Windows.Forms.TextBox();
-            this.lblmodel = new System.Windows.Forms.Label();
-            this.lblequipmentType = new System.Windows.Forms.Label();
-            this.lblfName = new System.Windows.Forms.Label();
             this.gbinfo = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblserial = new System.Windows.Forms.Label();
             this.lblbrand = new System.Windows.Forms.Label();
             this.lbllName = new System.Windows.Forms.Label();
             this.lbljobnumber = new System.Windows.Forms.Label();
+            this.lblmodel = new System.Windows.Forms.Label();
+            this.lblfName = new System.Windows.Forms.Label();
+            this.lblequipmentType = new System.Windows.Forms.Label();
             this.gvJobs = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -71,6 +71,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.splitContainer1.Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer1.Panel1.BackgroundImage")));
             this.splitContainer1.Panel1.Controls.Add(this.lblstatus);
             this.splitContainer1.Panel1.Controls.Add(this.gbtechReport);
             this.splitContainer1.Panel1.Controls.Add(this.lblissues);
@@ -90,6 +92,7 @@
             // lblstatus
             // 
             this.lblstatus.AutoSize = true;
+            this.lblstatus.BackColor = System.Drawing.Color.Transparent;
             this.lblstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblstatus.Location = new System.Drawing.Point(16, 270);
             this.lblstatus.Name = "lblstatus";
@@ -99,6 +102,7 @@
             // 
             // gbtechReport
             // 
+            this.gbtechReport.BackColor = System.Drawing.Color.Transparent;
             this.gbtechReport.Controls.Add(this.txttechReport);
             this.gbtechReport.Location = new System.Drawing.Point(12, 313);
             this.gbtechReport.Name = "gbtechReport";
@@ -118,6 +122,7 @@
             // lblissues
             // 
             this.lblissues.AutoSize = true;
+            this.lblissues.BackColor = System.Drawing.Color.Transparent;
             this.lblissues.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblissues.Location = new System.Drawing.Point(16, 144);
             this.lblissues.Name = "lblissues";
@@ -166,32 +171,9 @@
             this.txtproblem.Size = new System.Drawing.Size(233, 88);
             this.txtproblem.TabIndex = 1;
             // 
-            // lblmodel
-            // 
-            this.lblmodel.AutoSize = true;
-            this.lblmodel.Location = new System.Drawing.Point(175, 92);
-            this.lblmodel.Name = "lblmodel";
-            this.lblmodel.Size = new System.Drawing.Size(0, 13);
-            this.lblmodel.TabIndex = 0;
-            // 
-            // lblequipmentType
-            // 
-            this.lblequipmentType.AutoSize = true;
-            this.lblequipmentType.Location = new System.Drawing.Point(115, 70);
-            this.lblequipmentType.Name = "lblequipmentType";
-            this.lblequipmentType.Size = new System.Drawing.Size(0, 13);
-            this.lblequipmentType.TabIndex = 0;
-            // 
-            // lblfName
-            // 
-            this.lblfName.AutoSize = true;
-            this.lblfName.Location = new System.Drawing.Point(55, 26);
-            this.lblfName.Name = "lblfName";
-            this.lblfName.Size = new System.Drawing.Size(0, 13);
-            this.lblfName.TabIndex = 0;
-            // 
             // gbinfo
             // 
+            this.gbinfo.BackColor = System.Drawing.Color.Transparent;
             this.gbinfo.Controls.Add(this.label6);
             this.gbinfo.Controls.Add(this.label5);
             this.gbinfo.Controls.Add(this.label4);
@@ -205,12 +187,73 @@
             this.gbinfo.Controls.Add(this.lblmodel);
             this.gbinfo.Controls.Add(this.lblfName);
             this.gbinfo.Controls.Add(this.lblequipmentType);
+            this.gbinfo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.gbinfo.Location = new System.Drawing.Point(12, 12);
             this.gbinfo.Name = "gbinfo";
             this.gbinfo.Size = new System.Drawing.Size(251, 249);
             this.gbinfo.TabIndex = 7;
             this.gbinfo.TabStop = false;
             this.gbinfo.Text = "Job Information";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(7, 113);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(122, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Serial/ Service Tag:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(124, 92);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Model:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(7, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Brand:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(7, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Equipment Type:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Job #:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Name:";
             // 
             // lblserial
             // 
@@ -244,13 +287,37 @@
             this.lbljobnumber.Size = new System.Drawing.Size(0, 13);
             this.lbljobnumber.TabIndex = 0;
             // 
+            // lblmodel
+            // 
+            this.lblmodel.AutoSize = true;
+            this.lblmodel.Location = new System.Drawing.Point(175, 92);
+            this.lblmodel.Name = "lblmodel";
+            this.lblmodel.Size = new System.Drawing.Size(0, 13);
+            this.lblmodel.TabIndex = 0;
+            // 
+            // lblfName
+            // 
+            this.lblfName.AutoSize = true;
+            this.lblfName.Location = new System.Drawing.Point(55, 26);
+            this.lblfName.Name = "lblfName";
+            this.lblfName.Size = new System.Drawing.Size(0, 13);
+            this.lblfName.TabIndex = 0;
+            // 
+            // lblequipmentType
+            // 
+            this.lblequipmentType.AutoSize = true;
+            this.lblequipmentType.Location = new System.Drawing.Point(115, 70);
+            this.lblequipmentType.Name = "lblequipmentType";
+            this.lblequipmentType.Size = new System.Drawing.Size(0, 13);
+            this.lblequipmentType.TabIndex = 0;
+            // 
             // gvJobs
             // 
             this.gvJobs.AllowUserToAddRows = false;
             this.gvJobs.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.LightBlue;
-            this.gvJobs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.LightBlue;
+            this.gvJobs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gvJobs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvJobs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvJobs.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -259,66 +326,6 @@
             this.gvJobs.Size = new System.Drawing.Size(906, 511);
             this.gvJobs.TabIndex = 0;
             this.gvJobs.SelectionChanged += new System.EventHandler(this.gvJobs_SelectionChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Name:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Job #:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Equipment Type:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 92);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Brand:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(124, 92);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Model:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(7, 113);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Serial/ Service Tag:";
             // 
             // jobsForm
             // 

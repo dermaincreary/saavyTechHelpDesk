@@ -63,7 +63,7 @@
     <Property Name="username" Type="nvarchar" MaxLength="25" />
     <Property Name="password" Type="nvarchar" MaxLength="25" />
     <Property Name="roleId" Type="int" />
-    <Property Name="dateCreated" Type="datetime" />
+    <Property Name="dateCreated" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <Association Name="FK_New Job_ToTable">
     <End Role="equiptmentType" Type="Self.equiptmentType" Multiplicity="1" />

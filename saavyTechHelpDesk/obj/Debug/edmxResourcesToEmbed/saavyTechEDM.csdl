@@ -94,7 +94,7 @@
     <Property Name="username" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="password" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="roleId" Type="Int32" />
-    <Property Name="dateCreated" Type="DateTime" Precision="3" />
+    <Property Name="dateCreated" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="userRole" Relationship="saavyTechDBModel.FK_Users_ToTable" FromRole="Users" ToRole="userRole" />
   </EntityType>
   <Association Name="FK_New_Job_ToTable_1">
